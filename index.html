@@ -75,7 +75,7 @@
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li class="active"><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="#our-blog" class="nav-link">O nas</a></li>
-                <li><a href="#videos" class="nav-link">galerija</a></li>
+                <li><a href="#videos" class="nav-link">Galerija</a></li>
                 <li><a href="#footer" class="nav-link">Kontakt</a></li>
               </ul>
 
@@ -96,7 +96,7 @@
             <h1 class="text-white">Tečaj gorskokolesarske tehnike</h1>
             <p>Izboljšaj svojo spretnost ter samozavest na gorskem kolesu.</p>
             <p>
-              <a href="#" class="btn btn-primary py-3 px-4 mr-3">Prijava</a>
+              <a href="#" id="prvi-prijavni" class="btn btn-primary py-3 px-4 mr-3">Prijava</a>
               <a href="#team-details" class="more light">Več</a>
             </p>  
           </div>
@@ -104,66 +104,111 @@
       </div>
     </div>
 
-    
-    
+
+
+    <style>
+      .accordion-section h4 {
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+
+      .accordion-section h4:hover {
+        font-weight: bold;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 10px 0;
+      }
+
+      .accordion-content.open {
+        display: block;
+      }
+    </style>
+
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="team-vs" id="team-details">
-            <div class="team-1 ">
-              <div class="team-details w-100" >
+            <div class="team-1">
+              <div class="team-details w-100">
                 <h4 style="font-weight: bold">Hej,</h4>
-                <p>ste eden tistih, ki obožujejo kolesarjenje v naravi, a
-                  vas pred resničnim užitkom zadržujejo pomisleki: "Kaj če
-                  padem? Bom spet “cokla”? Kaj če se izgubim, kaj če me
-                  napade žival, kaj če dobim kazen za vožnjo po
-                  prepovedanem območju? In še mnogo drugih podobnih
-                  vprašanj. <br>
-                  <br>
-                  In če ste se prepoznali v teh vrsticah, imamo rešitev za
-                  vas! Vabimo vas na Tečaj tehnike vožnje s kolesom v
-                  naravi! Tukaj boste osvojili tehnike obvladovanja kolesa
-                  in svojega telesa, se seznanili s pravili kolesarjenja v
-                  naravnem okolju ter se naučili prepoznati in obvladati
-                  različne nevarnosti. Pripravili se boste na reševanje
-                  ključnih situacij in s tem pridobili samozavest za
-                  brezskrbno samostojno uživanje v naravi ali v skupini.</p>
+                <p>
+                  Ste eden tistih, ki obožujejo kolesarjenje v naravi, a vas pred resničnim užitkom zadržujejo pomisleki:
+                  "Kaj če padem? Bom spet “cokla”? Kaj če se izgubim, kaj če me napade žival, kaj če dobim kazen za vožnjo po
+                  prepovedanem območju?" In še mnogo drugih podobnih vprašanj.
+                  <br><br>
+                  In če ste se prepoznali v teh vrsticah, imamo rešitev za vas! Vabimo vas na Tečaj tehnike vožnje s
+                  kolesom v naravi! Tukaj boste osvojili tehnike obvladovanja kolesa in svojega telesa, se seznanili s
+                  pravili kolesarjenja v naravnem okolju ter se naučili prepoznati in obvladati različne nevarnosti.
+                  Pripravili se boste na reševanje ključnih situacij in s tem pridobili samozavest za brezskrbno samostojno
+                  uživanje v naravi ali v skupini.
+                </p>
               </div>
 
               <hr>
-              <div class="course-details w-100">
-                <section class="course-info">
-                  <h4 style="font-weight: bold">Kdo se nam lahko pridruži?</h4>
-                  <p>Popolnoma vsi! Naš tečaj je odprt za vse starostne skupine in vse nivoje kolesarskega znanja. Dobrodošli so kolesarji z vsemi vrstami koles.</p> <br>
 
-                  <h4 style="font-weight: bold">Kako je organiziran tečaj?</h4>
-                  <p>Tečaj je razdeljen na dva dneva. V prvem dnevu bomo izvedli teoretični in praktični del s terenskimi vajami. Sledi skupna tura v ločenem terminu s časovnim zamikom vsaj enega meseca, ki jo bomo izkoristili za pregled osvojenega znanja in korekcije.</p> <br>
+              <div class="course-details w-100 accordion-section">
 
-                  <h4 style="font-weight: bold">Kaj morate imeti s seboj?</h4>
-                  <p>Vaša varnost je na prvem mestu, zato je obvezna zaščitna kolesarska oprema. Nujno potrebujete kolesarsko čelado, očala, rokavice in komplet prve pomoči. Vso ostalo zaščitno opremo pa bomo podrobno pregledali in spoznali med samim tečajem.</p> <br>
+                <h4 onclick="toggleAccordion(this)">- Kdo se nam lahko pridruži?</h4>
+                <div class="accordion-content">
+                  <p>Popolnoma vsi! Naš tečaj je odprt za vse starostne skupine in vse nivoje kolesarskega znanja.
+                    Dobrodošli so kolesarji z vsemi vrstami koles.</p>
+                </div>
 
-                  <h4 style="font-weight: bold">Lokacija</h4>
-                  <p>CŠOD Prvine, smučišče Prvine, okolica Čemšeniške planine.</p> <br>
+                <h4 onclick="toggleAccordion(this)">- Kako je organiziran tečaj?</h4>
+                <div class="accordion-content">
+                  <p>Tečaj je razdeljen na dva dneva. V prvem dnevu bomo izvedli teoretični in praktični del s terenskimi
+                    vajami. Sledi skupna tura v ločenem terminu s časovnim zamikom vsaj enega meseca, ki jo bomo izkoristili
+                    za pregled osvojenega znanja in korekcije.</p>
+                </div>
 
-                  <h4 style="font-weight: bold">Termin</h4>
+                <h4 onclick="toggleAccordion(this)">- Kaj morate imeti s seboj?</h4>
+                <div class="accordion-content">
+                  <p>Vaša varnost je na prvem mestu, zato je obvezna zaščitna kolesarska oprema. Nujno potrebujete
+                    kolesarsko čelado, očala, rokavice in komplet prve pomoči. Vso ostalo zaščitno opremo pa bomo podrobno
+                    pregledali in spoznali med samim tečajem.</p>
+                </div>
+
+                <h4 onclick="toggleAccordion(this)">- Lokacija</h4>
+                <div class="accordion-content">
+                  <p>SRC Marela, Jablana, Zagorje ob Savi, Slovenija</p>
+                </div>
+
+                <h4 onclick="toggleAccordion(this)">- Termin</h4>
+                <div class="accordion-content">
                   <ul>
-                    <li>23. avgust 2025</li>
-                    <li>5. september 2025 ob 8.00</li>
+                    <li>11. Oktober 2025 ob 8.00</li>
+                    <li>12. September 2025 ob 8.00</li>
                     <li>Termin skupne ture določimo ob zaključku prvega dne.</li>
-                  </ul> <br>
+                  </ul>
+                </div>
 
-                  <h4 style="font-weight: bold">Cena</h4>
-                  <p>Lorem ipsum</p> <br>
-                </section>
+                <h4 onclick="toggleAccordion(this)">- Cena</h4>
+                <div class="accordion-content">
+                  <p>80 € / na osebo</p>
+                </div>
+
+                <a href="#" id="drugi-prijavni" class="btn btn-primary py-3 px-4 mr-3"
+                   style="font-size: 15px; background-color: #212730; color: white; display: block; text-align: left; width: fit-content; margin-top: 20px">
+                  Prijava
+                </a>
 
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+
+    <script>
+      function toggleAccordion(element) {
+        const content = element.nextElementSibling;
+        content.classList.toggle('open');
+      }
+    </script>
 
 
     <div class="site-section" id="videos">
@@ -241,22 +286,30 @@
         <div class="col-lg-6">
           <div class="custom-media d-flex">
             <div class="img mr-4">
+              <img src="images/PXL_20211017_100739772.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="text">
-              <span class="meta">May 20, 2020</span>
-              <h3 class="mb-4"><a href="#">Romolu to stay at Real Nadrid?</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
+              <h3 class="mb-4"><a href="#">Franci RAZPET, dipl.org.inf.
+
+                Turnokolesarski vodnik II <br>
+
+                Strokovni sodelavec v športu II</a></h3>
+              <p>Eden od ustanoviteljev Komisije
+                za turno kolesarstvo pri PZS,
+                bivši alpinist, turni smučar,
+                gorski tekač in predan gorski
+                kolesar..</p>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
           <div class="custom-media d-flex">
             <div class="img mr-4">
+              <img src="images/PXL_20211017_100739772.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="text">
-              <span class="meta">May 20, 2020</span>
-              <h3 class="mb-4"><a href="#">Romolu to stay at Real Nadrid?</a></h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus deserunt saepe tempora dolorem.</p>
+              <h3 class="mb-4"><a href="#">Marko LEBAR, dipl. prof. tel. vzg.</a></h3>
+              <p>Kolesar in športnik s 30-letnimi izkušnjami pri strateškem razvoju športa in športnih dogodkov</p>
             </div>
           </div>
         </div>
@@ -265,23 +318,44 @@
 
 
 
+
+
     <footer class="footer-section" id="footer">
       <div class="container">
-        <div class="footer-widget" style="display: flex; gap: 200px; align-items: center; margin-left: 150px">
-          <div style="display: flex; align-items: center; gap: 20px;">
-            <img src="images/Screenshot%202025-07-30%20at%2022.33.39.png" alt="Naturo" class="footer-photo" />
-            <div>
-              <h5>Organizacija in vodenje tečaja</h5>
-              <p>Franci RAZPET, TKV II<br>
-                <em>Strokovni sodelavec v športu II</em></p>
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+              <img src="images/Screenshot%202025-07-30%20at%2022.33.39.png" style="width: 100px; height: 100px; margin-bottom: 20px">
+
+              <h3 style="font-weight: bold;">Več informacij</h3>
+              <ul class="list-unstyled links">
+                <li style="font-size: 17px">tel: <a href="tel:+38631385606">031 385 606</a><br></li>
+                <li style="font-size: 17px">mail: <a href="mailto:frazpet@gmail.com">frazpet@gmail.com</a></li>
+
             </div>
           </div>
-          <div>
-            <h5>Več informacij o tečaju</h5>
-            <p>Telefon: <a href="tel:+38631385606" style="color: #52C621" >031 385 606</a><br>
-              Email: <a href="mailto:frazpet@gmail.com" style="color: #52C621" >frazpet@gmail.com</a></p>
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+
+            </div>
           </div>
+          <div class="col-lg-3">
+            <div class="widget mb-3">
+
+
+            </div>
+          </div>
+
+
+          <div class="col-lg-3">
+            <div class="widget mb-3" style="font-size: 18px">
+
+              </ul>
+            </div>
+          </div>
+
         </div>
+
       </div>
     </footer>
 

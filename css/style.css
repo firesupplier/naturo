@@ -68,6 +68,9 @@ h1, h2, h3, h4, h5,
     opacity: 1;
     visibility: visible; }
 
+
+
+
 .btn {
   background-color: #3F6C67;
   border-color: #3F6C67;
@@ -113,6 +116,9 @@ h1, h2, h3, h4, h5,
         border-color: #fff;
         background: #fff;
         color: #000; }
+
+
+
 
 .line-height-1 {
   line-height: 1 !important; }
@@ -645,24 +651,30 @@ h1, h2, h3, h4, h5,
 }
 
 
-
 .team-vs .team-details {
-  margin-top: 40px;
-  margin-bottom: 30px;
-  margin-left: 200px;
   display: inline-block;
   text-align: left;
-  max-width: 60%;
+  padding: 80px;
+  box-sizing: border-box;
 }
 
 .team-vs .course-details {
-  margin-top: 40px;
-  margin-bottom: 30px;
-  margin-left: 200px;
   display: inline-block;
   text-align: left;
-  max-width: 60%;
+  padding: 80px;
+  padding-top: 30px; /* ali katerakoli manjša vrednost */
+  box-sizing: border-box;
 }
+
+
+@media (max-width: 576px) { /* za male ekrane (npr. telefoni) */
+  .team-vs .team-details,
+  .team-vs .course-details {
+    padding: 10px;
+  }
+}
+
+
 .team-vs .course-details .h4{
   font-weight: bold;
 }
@@ -674,9 +686,20 @@ h1, h2, h3, h4, h5,
 hr {
   border: none;
   width: 60%;
-  margin-left: 200px;
+  padding: 20px;
   border-top: 1px solid #ccc;
 }
+
+#videos {
+  scroll-margin-top: 150px; /* Prilagodi glede na višino tvoje glave / headerja */
+}
+
+
+#our-blog {
+  scroll-margin-top: 150px; /* Prilagodi glede na višino tvoje glave / headerja */
+}
+
+
 
 
 .video-media {
@@ -731,24 +754,22 @@ hr {
     border: none; }
 
 
+
 .footer-section {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 60px;
-  height: 300px;
-  display: flex;
-  align-items: center;
-}
-
-.footer-section .org {
-  margin-left: 500px;
-}
-
-.footer-photo {
-  height: 5em;      /* približno višina teksta */
-  width: 5em;       /* kvadrat 1:1 */
-  object-fit: cover;
-  margin-bottom: 20px;
-}
+  padding: 70px 0;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  background: #1a1e25; }
+.footer-section .widget h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 20px; }
+.footer-section .widget .links li {
+  margin-bottom: 10px; }
+.footer-section .widget .links li a {
+  color: rgba(255, 255, 255, 0.5); }
+.footer-section .widget .links li a:hover {
+  color: limegreen; }
 
 
 
